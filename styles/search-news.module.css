@@ -1,0 +1,56 @@
+.header {
+    display: block;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: deepskyblue;
+
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: wheat;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+.header .logo {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.header .searchBar {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 200px;
+}
+
+.header .functions {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    background-color: darkgrey;
+}
+
+.header .functions ul {
+    padding: 0;
+    margin: 0;
+}
+
+.header .functions li {
+    display: inline-block;
+}
