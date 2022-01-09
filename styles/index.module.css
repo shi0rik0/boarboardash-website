@@ -12,8 +12,7 @@
     display: block;
     position: fixed;
     width: 100%;
-    top: 200px;
-    background-color: red;
+    top: 100px;
     text-align: center;
 }
 
@@ -23,7 +22,6 @@
     width: 100%;
     bottom: 0px;
     height: 100px;
-    background-color: blue;
 }
 
 .footer span {
@@ -32,4 +30,67 @@
     top: 20px;
     width: 100%;
     text-align: center;
+}
+
+.main .slogan {
+    font-family: "Open Sans";
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.main form {
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 100%;
+}
+
+.main .searchInput {
+    position: absolute;
+    top: 0;
+    left: calc((100% - 522px) / 2);
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    font-size: 16px;
+    width: 400px;
+    height: 40px;
+    border-radius: 6px 0 0 6px;
+    border: 2px solid #c4c7ce;
+}
+
+.main .searchSubmit {
+    position: absolute;
+    top: 0;
+    right: calc((100% - 522px) / 2);
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    width: 100px;
+    height: 46px;
+    background-color: #85db78;
+    border-radius: 0 6px 6px 0;
+    border: 2px solid #85DB78;
+}
+.main .searchSubmit:hover {
+    background-color: #66ad57;
+    border-color: #66ad57;
+}
+
+.main .imageSearchBtn {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    width: 100px;
+    height: 46px;
+    background-color: #85db78;
+    border-radius: 6px 6px 6px 6px;
+    border: 2px solid #85db78;
+}
+
+.main .imageSearchBtn:hover {
+    background-color: #66ad57;
+    border-color: #66ad57;
 }

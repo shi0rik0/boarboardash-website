@@ -26,13 +26,14 @@ export default function Index() {
         <title>BoarBoarDash</title>
       </Head>
       <main className={styles.main}>
-        <Image src="/vercel.svg" alt="" width={100} height={100} />
+        <Image src="/logo.png" alt="" width={200} height={200} />
+        <p className={styles.slogan}>BoarBoarDash</p>
         <form onSubmit={onSubmit}>
-          <input type="text" placeholder="输入关键词" value={keyword} onChange={e => setKeyword(e.target.value)} />
-          <input type="submit" />
+          <input className={styles.searchInput} type="text" placeholder="输入关键词" value={keyword} onChange={e => setKeyword(e.target.value)} />
+          <input className={styles.searchSubmit} type="submit" value="新闻搜索" />
         </form>
         <p>或者</p>
-        <button>图片搜索</button>
+        <button className={styles.imageSearchBtn}>图片搜索</button>
       </main>
       <footer className={styles.footer}>
         <span>四张不脱发</span>
