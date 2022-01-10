@@ -1,4 +1,29 @@
 .wrapper {
     display: block;
+    margin: 0;
+    padding: 0;
+}
 
+.wrapper em {
+    color: orangered;
+    font-style: normal;
+}
+
+.wrapper a {
+    font-size: 120%;
+    margin: 0 0 4px 0;
+    padding: 0;
+    color: #2440b3;
+}
+
+.wrapper .url {
+    color: #626675;
+    font-size: 75%;
+    margin: 4px 0 0 0;
+    padding: 0;
+}
+
+.wrapper .snippet {
+    margin: 4px 0;
+    padding: 0;
 }

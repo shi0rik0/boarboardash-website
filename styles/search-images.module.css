@@ -3,23 +3,44 @@
     position: relative;
     height: 100px;
     width: 100%;
-    background-color: deepskyblue;
-
+    background-color: rgb(247, 247, 247);
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #c4c7ce;
 }
 
 
 .header .logo {
     display: block;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 60px;
 }
 
-.header .searchBar {
-    display: inline-block;
+.fileInput {
     position: absolute;
-    top: 10px;
-    left: 200px;
+    top: 35px;
+    left: 150px;
+    width: 250px;
+}
+
+.fileSubmit {
+    position: absolute;
+    top: 30px;
+    left: 420px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    width: 100px;
+    height: 36px;
+    background-color: #85db78;
+    border-radius: 6px;
+    border: 2px solid #85DB78;
+}
+.fileSubmit:hover {
+    background-color: #66ad57;
+    border-color: #66ad57;
 }
 
 .header .functions {
@@ -40,4 +61,17 @@
 
 .header .functions li {
     display: inline-block;
+}
+
+
+
+.image {
+    display: inline-block;
+    height: 200px;
+    margin: 20px;
+}
+
+.image img {
+    height: 200px;
+    max-width: 500px;
 }

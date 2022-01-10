@@ -29,7 +29,7 @@ export default function SearchImages() {
     // console.log(result.slice(result.length - 100, result.length))
     axios.post(config.searchImagesApiUrl, {
       data: result,
-      max_num_hits: 10,
+      max_num_hits: 100,
     }).then(res => {
       setUrls(res.data.hits)
     }).catch(console.log)
@@ -45,27 +45,25 @@ export default function SearchImages() {
   return (
     <div>
       <Head>
-        <title>搜索新闻</title>
+        <title>图片搜索 - BoarBoarDash</title>
       </Head>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Image src="/vercel.svg" alt="" width={50} height={50} />
+          <Image src="/logo.png" alt="" width={50} height={50} />
         </div>
-        <div className={styles.searchBar}>
+        <div>
           <form onSubmit={onSubmit}>
-            <input type="file" onChange={onFileChange} />
-            <input type="submit" />
+            <input className={styles.fileInput} type="file" onChange={onFileChange} />
+            <input className={styles.fileSubmit} type="submit" value="图片搜索" />
           </form>
-        </div>
-        <div className={styles.functions}>
-          <ul>
-            <li>新闻</li>
-            <li>图片</li>
-          </ul>
         </div>
       </header>
       <main>
-        {urls.map(i => <p>{i}</p>)}
+        {urls.map(i => (
+          <a className={styles.image} key={i} href={i}>
+            <img src={i} alt="" />
+          </a>
+        ))}
       </main>
     </div>
   )

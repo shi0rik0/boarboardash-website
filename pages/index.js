@@ -10,15 +10,23 @@ export async function getServerSideProps(context) {
   }
 }
 
+
+
 export default function Index() {
   const [keyword, setKeyword] = useState('')
   const router = useRouter()
   function onSubmit(e) {
     e.preventDefault()
-    router.push({
-      pathname: '/search-news',
-      query: {keyword: 'kw'},
-    })
+    let k = keyword.trim()
+    if (k) {
+      router.push({
+        pathname: '/search-news',
+        query: {keyword: k},
+      })
+    }
+  }
+  function jumpToSearchImages() {
+    router.push('/search-images')
   }
   return (
     <div className={styles.container}>
@@ -33,7 +41,7 @@ export default function Index() {
           <input className={styles.searchSubmit} type="submit" value="新闻搜索" />
         </form>
         <p>或者</p>
-        <button className={styles.imageSearchBtn}>图片搜索</button>
+        <button className={styles.imageSearchBtn} onClick={jumpToSearchImages}>图片搜索</button>
       </main>
       <footer className={styles.footer}>
         <span>四张不脱发</span>
